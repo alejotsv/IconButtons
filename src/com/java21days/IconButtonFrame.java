@@ -12,7 +12,7 @@ public class IconButtonFrame extends JFrame {
         ArrayList<JButton> jButtons = createButtons(buttons);
         setSize(d);
         JPanel panel = new JPanel();
-        for(JButton  jButton : jButtons){
+        for(JButton jButton : jButtons){
             panel.add(jButton);
         }
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -24,7 +24,8 @@ public class IconButtonFrame extends JFrame {
     ArrayList<JButton> createButtons(ArrayList<String> buttons) {
         ArrayList<JButton> jButtons = new ArrayList<>();
         for(String button : buttons){
-            ImageIcon icon = new ImageIcon(button);
+            System.out.println(button);
+            ImageIcon icon = new ImageIcon(getClass().getResource("res/" + button));
             JButton btn = new JButton(icon);
             jButtons.add(btn);
         }
