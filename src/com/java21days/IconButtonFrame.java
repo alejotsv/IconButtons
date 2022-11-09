@@ -12,9 +12,12 @@ public class IconButtonFrame extends JFrame {
         ArrayList<JButton> jButtons = createButtons(buttons);
         setSize(d);
         JPanel panel = new JPanel();
-        panel.add(jButtons.get(0));
+        for(JButton  jButton : jButtons){
+            panel.add(jButton);
+        }
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+        add(panel);
         setVisible(true);
     }
 
