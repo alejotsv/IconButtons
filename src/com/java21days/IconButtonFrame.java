@@ -11,6 +11,8 @@ public class IconButtonFrame extends JFrame {
         super(title);
         ArrayList<JButton> jButtons = createButtons(buttons);
         setSize(d);
+        JPanel panel = new JPanel();
+        panel.add(jButtons.get(0));
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
